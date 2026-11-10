@@ -1,15 +1,10 @@
 flowchart TD
-    A[解释或教学文档] --> B{学情足以选择起点?}
-    B -->|是| D[教学设计与问题链]
-    B -->|否| C[有限学情诊断 最多五问]
-    C --> D
-    D --> E[Markdown 正文与媒体说明]
-    E --> F{教学逻辑自审}
-    F -->|补前提或改媒体| E
-    F -->|通过| G{本次交付范围}
-    G -->|先审稿或只需 Markdown| J[交付可审阅讲稿]
-    G -->|完整 HTML| H[制作布局 动画与交互]
-    H --> I{内容与行为核验}
-    I -->|暴露教学设计问题| E
-    I -->|呈现问题| H
-    I -->|通过| K[交付讲稿与 HTML]
+  A[Reader and goal] --> B[Markdown draft]
+  B --> C{Optional rewrite}
+  C -->|No| E[Accepted Markdown]
+  C -->|Authorized| D[Rewrite and fact review]
+  D -->|Accept| E
+  D -->|Reject| B
+  E --> F[HTML presentation]
+  F --> G[Content and visual checks]
+  G -->|Revise source| B
