@@ -1,0 +1,7 @@
+interface:
+  display_name: "教学讲解文档"
+  short_description: "先分析读者与叙事，再编写带媒体设计说明的讲稿，最后制作HTML"
+  default_prompt: "使用 $explain-artifact，先分析我的基础与学习目标，再写带媒体设计说明的 Markdown，最后制作教学讲解 HTML。"
+
+policy:
+  allow_implicit_invocation: true
